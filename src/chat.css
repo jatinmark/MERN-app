@@ -1,0 +1,74 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    flex: 0.75;
+}
+.chat__header{
+    background-color: #dfdddd8c;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+
+}
+
+.ava__info{
+    padding: 20px;
+    flex: 1;
+}
+.ava__info>h3{
+    margin-bottom: 3px;
+    font-weight:500 ;
+}
+.ava__info > p{
+    color: gray;
+}
+.chat__body{
+    flex: 1;
+    overflow-y:scroll ;
+    background-image: url("https://sleekflow.io/static/images/whatsapp-button-generator/whatsApp-bg.jpeg");
+    background-repeat: repeat;
+    background-position: center;
+    padding: 30px;
+}
+/* .chat__message{
+    position: relative;
+    margin-bottom: 30px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    font-size: 16px ;
+    padding: 10px;
+    width: fit-content;
+} */
+
+.chat__body::-webkit-scrollbar {
+    display: none;
+}
+
+.chat__footer{
+    background-color: #dfdddd8c;
+    display: flex;
+    height: 62px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgrey;
+}
+.chat__footer > form{
+    display: flex;
+    flex: 1;
+}
+.chat__footer >form >input {
+    flex:1;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline-width: 0;
+}
+.chat__footer > .MuiSvgIcon-root{
+    padding: 10px;
+    color: gray;
+}
+.chat__footer >form >button {
+    display: none;
+}

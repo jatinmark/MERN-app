@@ -1,0 +1,18 @@
+.add_contact{
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #f6f6f6;
+
+}
+.add_contact:hover{
+    background-color: rgb(226, 226, 226);
+}
+.info > h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.info {
+    margin-left: 15px ;
+}
+
