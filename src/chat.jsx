@@ -15,14 +15,14 @@ import MicIcon from '@mui/icons-material/Mic';
 function Chat({message}) {
  
 const [input,setinput] = useState('');
-
+let time= new Date().getTime();
  const sendmessage = async (e) => {
    e.preventDefault();
   
    await axios.post('/message/new' , {
       message :  input ,
-      timestamp : "just now" ,
-      received : "false" ,
+      timestamp : time ,
+      received : "true" ,
       name  : "demo app"
    });
    
