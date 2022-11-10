@@ -6,9 +6,9 @@
 .sidebar__header{
     display: flex;
     justify-content: space-between;
-    padding: 23px;
+    padding: 24.5px;
     border-right:1px solid lightgrey ;
-    background-color: #dfdddd8c;
+    background-color: #E97777;
     
 }
 .sidebar__heade__right{

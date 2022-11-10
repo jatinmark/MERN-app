@@ -15,7 +15,7 @@ import MicIcon from '@mui/icons-material/Mic';
 function Chat({message}) {
  
 const [input,setinput] = useState('');
-let time= new Date().getTime();
+let time = new Date().toLocaleTimeString();
  const sendmessage = async (e) => {
    e.preventDefault();
   
@@ -23,7 +23,7 @@ let time= new Date().getTime();
       message :  input ,
       timestamp : time ,
       received : "true" ,
-      name  : "demo app"
+      name  : "jatin"
    });
    
    setinput("");
