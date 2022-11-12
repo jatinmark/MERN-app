@@ -14,12 +14,13 @@
 }
 
 .ava__info{
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     flex: 1;
 }
 .ava__info>h3{
     margin-bottom: 3px;
     font-weight:500 ;
+    font-size: 1.3rem;
 }
 .ava__info > p{
     color: gray;
@@ -60,7 +61,7 @@
 }
 .chat__footer >form >input {
     flex:1;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     padding: 10px;
     outline-width: 0;

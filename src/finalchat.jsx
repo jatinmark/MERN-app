@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
+import React , { useEffect, useState } from 'react';
 import Sidebar from './sidebar';
 import Chat from './chat';
 import './App.css';
 import axios from './axios.js';
-
+import {useContext} from 'react'
+import { AccountContext } from './accountdetail';
 import Pusher from 'pusher-js'
+import Loginpage from './loginpage';
 
 function Finalchat(){
-
+ const {account} = useContext(AccountContext);
     const  [ message , setmessage] = useState([]);
   
  useEffect(() => {
@@ -37,12 +39,15 @@ return () => {
 
   console.log(message);
     return(
-        <div className="app" >
+      <div>
+        {account ? <><div className="app" >
       <div className = "app__body" >
         
           <Sidebar />         {    /* Sidebar  */}
         <Chat  message={message} />           {/* Chat   */}
       </div>
+    </div></> : <Loginpage /> }
+        
     </div>
     )
 }
