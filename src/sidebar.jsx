@@ -37,8 +37,7 @@ function Sidebar() {
                  
                  <div className='addcon' >
                   <Sidebarchat />
-                  <Sidebarchat />
-                  <Sidebarchat />
+                  
                  </div>
           </div>
           

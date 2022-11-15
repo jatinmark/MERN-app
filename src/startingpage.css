@@ -1,0 +1,21 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    flex: 0.72 ;
+    background: #b6dedd;
+    background: -webkit-radial-gradient(circle, #b6dedd 0%, #ea6372 100%);
+    background: radial-gradient(circle, #b6dedd 0%, #ea6372 100%);
+}
+.contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    text-align: center;
+
+}
+.message{
+    color: grey;
+    margin-top: 30px;
+}

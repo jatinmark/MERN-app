@@ -7,13 +7,14 @@ import {useContext} from 'react'
 import { AccountContext } from './accountdetail';
 import Pusher from 'pusher-js'
 import Loginpage from './loginpage';
-
+import Startingpage from './startingpage';
 function Finalchat(){
  const {account} = useContext(AccountContext);
+ const {person} = useContext(AccountContext);
     const  [ message , setmessage] = useState([]);
   
  useEffect(() => {
- axios.get('message/sync').then((response) => {
+ axios.get('/message/sync').then((response) => {
   setmessage(response.data)
  });
   }, []);
@@ -44,7 +45,7 @@ return () => {
       <div className = "app__body" >
         
           <Sidebar />         {    /* Sidebar  */}
-        <Chat  message={message} />           {/* Chat   */}
+       { Object.keys(person).length ? <Chat  message={message} />  : <Startingpage />   }        {/* Chat   */}
       </div>
     </div></> : <Loginpage /> }
         

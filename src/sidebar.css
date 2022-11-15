@@ -1,14 +1,14 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    flex: 0.25;
+    flex: 0.28;
 }
 .sidebar__header{
     display: flex;
     justify-content: space-between;
-    padding: 24.5px;
+    padding: 23.5px;
     border-right:1px solid lightgrey ;
-    background-color: #E97777;
+    background-color: #ea6372;
     
 }
 .sidebar__heade__right{
@@ -27,13 +27,13 @@ font-size: 24px ! important;
     align-items: center;
     height: 39px;
     background-color: aliceblue;
-    padding: 40px 10px 30px 20px;
+    padding: 40px 10px 30px 25px;
 }
 .search_contain{
     display: flex;
     align-items: center;
     height: 35px;
-    width: 250px;
+    width: 300px;
     background-color: #dfdddd8c;
     border-radius: 10px;
 }
@@ -44,10 +44,10 @@ font-size: 24px ! important;
 .search_contain > input {
     border : none;
     outline-width: 0;
-    margin-left: 10px;
+    margin-left: 6px;
     background-color: #dfdddd8c;
     border-radius: 10px;
-    width : 180px;
+    width: 238px;
 }
 
  .addcon {

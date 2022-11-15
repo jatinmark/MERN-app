@@ -1,10 +1,10 @@
 .chat{
     display: flex;
     flex-direction: column;
-    flex: 0.75;
+    flex: 0.72;
 }
 .chat__header{
-    background-color: #E97777;
+    background-color: #ea6372;
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
@@ -48,7 +48,7 @@
 }
 
 .chat__footer{
-    background-color: #E97777;
+    background-color: #ea6372;
     display: flex;
     height: 62px;
     justify-content: space-between;

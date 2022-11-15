@@ -4,6 +4,8 @@ import bodyParser from 'body-parser';
 import Messages from './dbmessages.js'
 import Pusher from "pusher";
 import cors from 'cors'
+import dotenv from 'dotenv'
+import  Router  from "./routes.js";
 const app = express();
 
 
@@ -15,19 +17,24 @@ const pusher = new Pusher({
   useTLS: true
 });
 
-app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.json());
+app.use('/', Router);
+
+
+dotenv.config();
+const USERNAME = process.env.DB_USERNAME ; 
+const PASSWAORD = process.env.DB_PASSWORD ; 
 
 //mongodb url 
-const mongourl = "mongodb+srv://admin:sg5hL9NNLtyJ5BLu@cluster0.s7xkc4a.mongodb.net/whatsappDB?retryWrites=true&w=majority"
+const mongourl = `mongodb+srv://${USERNAME}:${PASSWAORD}@cluster0.s7xkc4a.mongodb.net/whatsappDB?retryWrites=true&w=majority`
 
 mongoose.connect(mongourl);
 
 const db = mongoose.connection;
 
 db.once('open',() => {
-  console.log("db is connected");
-
+   console.log("db is connected");
 
 const msgCollection = db.collection('messagecontents');
 const changestream = msgCollection.watch();
@@ -74,6 +81,7 @@ app.post('/message/new',(req,res) => {
     }
   })}
 );
+
 
 app.listen(process.env.PORT || 9000, function() {
     console.log("Server started successfully");
