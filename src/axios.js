@@ -1,10 +1,10 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL : "https://9000-jatinmark-mernapp-8dmdyn7fsxk.ws-us75.gitpod.io" 
+  baseURL : "https://enigmatic-forest-76626.herokuapp.com" 
 });
 
-const url = 'https://9000-jatinmark-mernapp-8dmdyn7fsxk.ws-us75.gitpod.io';
+const url = 'https://enigmatic-forest-76626.herokuapp.com';
 
 export const addUser = async (data) => {
     try {
