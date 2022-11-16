@@ -33,7 +33,7 @@ const onloginsuccess = async(res) =>{
               <div className='main_content'>
                 <div className='icon'>
               <TelegramIcon  sx={{color: 'error.light', width : 60 , height : 60 }} />
-               <h1>Messanger App</h1> 
+               <h1>Messenger App</h1> 
                </div>
                <div className='greet'>
                <h5> Messaging, There's No Better Way.</h5>
