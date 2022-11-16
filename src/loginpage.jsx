@@ -40,9 +40,9 @@ const onloginsuccess = async(res) =>{
                </div>
                <div className='YOYO'>
                <button  type="submit" class="btn btn-outline-danger">
+               <div className='button'>< GoogleIcon /><span>Sign in with Google </span></div>   
                <GoogleLogin
-               onSuccess={onloginsuccess} />
-                <div className='button'>< GoogleIcon /><span>Sign in with Google </span></div>   
+               onSuccess={onloginsuccess} />   
                 </button>
                 </div>
                       </div>
