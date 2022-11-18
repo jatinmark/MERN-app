@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Avatar  } from '@mui/material';
 import './sidebarchat.css'
 import {useEffect} from 'react'
-import { getUsers } from './axios';
+import { getUsers, setConversation } from './axios';
 import {useContext} from 'react'
 import { AccountContext } from './accountdetail';
 
@@ -17,10 +17,11 @@ function Sidebarchat() {
   }
   fetchdata();
 },[]);
-const {setperson} = useContext(AccountContext);
+const {setperson , account} = useContext(AccountContext);
 
-const getUser = (user) => {
+const getUser = async  (user) => {
  setperson(user);
+ await setConversation({ senderId: account.sub, receiverId: user.sub });
 }
 
   return (

@@ -25,6 +25,14 @@ export const getUsers = async ()=>{
   }
 }
 
+export const setConversation = async (data) => {
+    try {
+        await axios.post(`${url}/conversation/add`, data);
+    } catch (error) {
+        console.log('Error while calling setConversation API ', error);
+    }
+}
+
 export default instance ;
 
-// https://stark-plains-39250.herokuapp.com
+// https://enigmatic-forest-76626.herokuapp.com
