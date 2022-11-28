@@ -4,7 +4,7 @@ import axios from 'axios'
 //   baseURL : "http://localhost:9000" 
 // });
 
-const url = 'https://message-app-jfay.onrender.com';
+const url = 'https://messenger-app-backend-gkftm4epo-jatinmark.vercel.app';
 
 export const addUser = async (data) => {
     try {
