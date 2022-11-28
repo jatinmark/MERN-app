@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const instance = axios.create({
-  baseURL : "https://enigmatic-forest-76626.herokuapp.com" 
-});
+// const instance = axios.create({
+//   baseURL : "http://localhost:9000" 
+// });
 
-const url = 'https://enigmatic-forest-76626.herokuapp.com';
+const url = 'https://message-app-jfay.onrender.com';
 
 export const addUser = async (data) => {
     try {
@@ -32,7 +32,42 @@ export const setConversation = async (data) => {
         console.log('Error while calling setConversation API ', error);
     }
 }
+export const getConversation = async (data) => {
+    try {
+       let res =  await axios.post(`${url}/conversation/get`, data);
+        return res.data;
+    } catch (error) {
+        console.log('Error while calling getConversation API ', error);
+    }
+}
 
-export default instance ;
+export const newMessage = async (data) => {
+    try {
+      await axios.post(`${url}/message/add`, data);
+    } catch (error) {
+        console.log('Error while calling newMessage API ', error);
+    }
+}
 
-// https://enigmatic-forest-76626.herokuapp.com
+export const getMessages = async (id)=>{
+    try{
+        let response = await axios.get(`${url}/message/get/${id}`);
+        console.log(response);
+        return response.data ;
+    }catch(error){
+        console.log('error while calling getMessages' , error.message);
+  }
+}
+
+export const uploadFile = async(Data) =>{
+try{
+ return  await axios.post(`${url}/file/upload`, Data);
+}catch(error){
+  console.log('error while calling uploadfile api' , error.message)
+}
+}
+
+
+
+// export default instance ;
+

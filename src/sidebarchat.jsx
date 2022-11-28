@@ -8,16 +8,17 @@ import { AccountContext } from './accountdetail';
 
 
 function Sidebarchat() {
+  const {setperson , account , text , users,setUsers} = useContext(AccountContext);
 
-  const [users,setUsers] = useState([]);
+  
     useEffect(() => {
   const fetchdata = async() => {
    let res =  await getUsers();
-   setUsers(res);
+   const filter = res.filter(user => user.name.toLowerCase().includes(text.toLowerCase())) 
+   setUsers(filter);
   }
   fetchdata();
-},[]);
-const {setperson , account} = useContext(AccountContext);
+},[text]);
 
 const getUser = async  (user) => {
  setperson(user);

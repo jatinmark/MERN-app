@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router.post('/add', addUser);
-router.get("/users",getUsers)
+router.get("/users",getUsers);
 router.post('/conversation/add', newConversation);
 
 

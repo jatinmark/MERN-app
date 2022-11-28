@@ -6,12 +6,16 @@ import ChatIcon from '@mui/icons-material/Chat';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import SearchIcon from '@mui/icons-material/Search';
 import Sidebarchat from './sidebarchat';
-
+import {useContext} from 'react'
+import { AccountContext } from './accountdetail';
 function Sidebar() {
+
+  const {settext ,account } = useContext(AccountContext);
+
   return (
     <div className='sidebar'>
           <div className = 'sidebar__header' >
-                  <Avatar src = "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHBlcnNvbnxlbnwwfHwwfHw%3D&w=1000&q=80"  />
+                  <Avatar style ={{ height : 42 , width: 42}} src = {account.picture}  />
          
                  <div className = 'sidebar__heade__right' >
                    <IconButton>
@@ -30,7 +34,7 @@ function Sidebar() {
                <IconButton>
                <SearchIcon />
                </IconButton>
-                       <input  type = "text" placeholder='search or start new chat'  />
+                       <input onChange={(e) => settext(e.target.value)} type = "text" placeholder='search or start new chat'  />
                        </div>
                        
                  </div>
